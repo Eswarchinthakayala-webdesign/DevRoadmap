@@ -1,0 +1,57 @@
+<!-- roadmap-view.html -->
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>View Roadmap - DevRoadmap</title>
+  <link rel="icon" type="image/x-icon"  href="logo2.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-all">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+  const user = localStorage.getItem("loggedInUser");
+  if (!user) {
+    alert("Please sign in to access this roadmap.");
+    window.location.href = "signin.html";
+  }
+</script>
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow">
+    <div class="flex items-center gap-3">
+      <a href="roadmap.html" class="text-lg text-blue-600 dark:text-blue-400 hover:underline">← Back to Roadmaps</a>
+      <h1 id="roadmap-title" class="text-xl font-bold">...</h1>
+    </div>
+    <button id="theme-toggle" class="w-9 h-9 bg-gray-200 dark:bg-gray-700 rounded-full">🌓</button>
+  </header>
+
+  <!-- Progress Bar -->
+  <div class="max-w-4xl mx-auto mt-6 px-6">
+    <div class="w-full bg-gray-300 dark:bg-gray-700 h-4 rounded-full">
+      <div id="progress-bar" class="h-4 bg-blue-600 dark:bg-blue-400 rounded-full transition-all" style="width: 0%"></div>
+    </div>
+    <p id="progress-text" class="text-sm mt-2 text-gray-600 dark:text-gray-300">0% complete</p>
+  </div>
+
+  <!-- Steps -->
+  <main id="steps-container" class="max-w-4xl mx-auto py-10 px-6 space-y-6">
+    <!-- Steps will be dynamically injected -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6">
+    &copy; 2025 DevRoadmap. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+
+
+  <script src="data.js"></script>
+  <script src="roadmap-view.js"></script>
+  <script src="utils.js"></script>
+</body>
+</html>

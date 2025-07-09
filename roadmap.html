@@ -1,0 +1,41 @@
+<!-- roadmap.html -->
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Roadmaps - DevRoadmap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+<link rel="icon" type="image/x-icon"  href="logo2.png">
+  <script>tailwind.config = { darkMode: 'class' }</script>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-all">
+
+  <!-- Header -->
+  <header class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="text-lg text-blue-600 dark:text-blue-400 hover:underline">← Back</a>
+      <h1 class="text-xl font-bold">All Roadmaps</h1>
+    </div>
+    <button id="theme-toggle" class="w-9 h-9 bg-gray-200 dark:bg-gray-700 rounded-full">🌓</button>
+  </header>
+
+  <!-- Roadmap Grid -->
+  <main class="max-w-5xl mx-auto py-12 px-6">
+    <div id="roadmap-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Cards rendered by roadmap.js -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6">
+    &copy; 2025 DevRoadmap. All rights reserved.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="roadmap.js"></script>
+  <script src="utils.js"></script>
+</body>
+</html>

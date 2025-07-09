@@ -1,0 +1,30 @@
+/* styles/style.css */
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+input, textarea, select, button {
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border-color: #3b82f6; /* Tailwind blue-500 */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+button {
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+a {
+  transition: color 0.2s;
+}
+.markdown-preview {
+  line-height: 1.6;
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
