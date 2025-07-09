@@ -10,15 +10,13 @@
   </script>
   <link rel="stylesheet" href="styles/style.css" />
   <link rel="icon" href="logo2.png" />
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 </head>
 <body class="pt-24 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-white transition-all">
-
 
   <!-- Header -->
   <header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow">
     <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">DevRoadmap</h1>
-
-    <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center space-x-4 text-sm">
       <a href="index.html" class="hover:text-blue-500 dark:hover:text-blue-400">Home</a>
       <a href="roadmap.html" class="protected-link hover:text-blue-500 dark:hover:text-blue-400">Roadmaps</a>
@@ -28,8 +26,6 @@
       <button id="signin-btn" class="ml-4 px-4 py-1 rounded bg-blue-600 text-white hover:bg-blue-700">Sign In</button>
       <button id="signout-btn" class="ml-2 px-4 py-1 rounded bg-red-600 text-white hover:bg-red-700 hidden">Sign Out</button>
     </nav>
-
-    <!-- Mobile Toggle -->
     <button id="mobile-menu-toggle" class="md:hidden text-2xl focus:outline-none">☰</button>
   </header>
 
@@ -44,15 +40,24 @@
     <button id="signout-btn-mobile" class="w-4/5 px-3 py-2 rounded bg-red-600 text-white hover:bg-red-700 hidden">Sign Out</button>
   </div>
 
-  <!-- Hero -->
-  <section class="text-center py-20 bg-gradient-to-br from-blue-100 to-white dark:from-gray-800 dark:to-gray-900">
-    <h2 class="text-4xl md:text-5xl font-bold mb-4">Build Your Custom Roadmap to Success</h2>
-    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl mx-auto mb-6">
-      Choose from curated developer roadmaps or create your own personalized learning path.
-    </p>
-    <a href="custom-builder.html" class="protected-link bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
-      Get Started
-    </a>
+  <!-- Hero Section -->
+  <section class="py-16 px-6 md:px-20 bg-gradient-to-br from-blue-100 to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+      <!-- Text content -->
+      <div class="text-center md:text-left max-w-xl">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Build Your Custom Roadmap to Success</h2>
+        <p class="text-lg text-gray-600 dark:text-gray-300 mb-6">
+          Choose from curated developer roadmaps or create your own personalized learning path.
+        </p>
+        <a href="custom-builder.html" class="protected-link inline-block bg-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">
+          Get Started
+        </a>
+      </div>
+
+      <!-- Animation -->
+      <dotlottie-player src="https://lottie.host/b8872099-32de-4f60-83b0-699221a4adc9/aEWPutNam5.lottie"
+        background="transparent" speed="1" style="width: 500px; height: 300px" loop autoplay></dotlottie-player>
+    </div>
   </section>
 
   <!-- Trending Roadmaps -->
@@ -71,7 +76,6 @@
   <!-- Scripts -->
   <script src="data.js"></script>
   <script src="auth.js"></script>
-  <!-- <script src="utils.js"></script> -->
   <script>
     const container = document.getElementById("trending-roadmaps");
     function loadTrendingRoadmaps() {
